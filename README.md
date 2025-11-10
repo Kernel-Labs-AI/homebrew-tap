@@ -12,9 +12,9 @@ brew install kernel-labs-ai/tap/awt
 
 AWT (Agent WorkTrees) is a CLI tool that enables multiple AI agents to safely create, use, and hand off Git worktrees for concurrent development workflows.
 
-## Available Formulas
+## Available Packages
 
-- **awt** - Agent WorkTrees CLI tool
+- **awt** - Agent WorkTrees CLI tool (available as a Homebrew Cask)
 
 ## Documentation
 
