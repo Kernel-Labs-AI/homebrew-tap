@@ -11,7 +11,7 @@ class Awt < Formula
   on_macos do
     on_intel do
       url "https://github.com/kernel-labs-ai/awt/releases/download/v0.1.0/awt_0.1.0_Darwin_x86_64.tar.gz"
-      sha256 "23842950a87f327b391a792cbd50878fab01ca71ddaf6504de689dc1718ff696"
+      sha256 "8f5f8dd83738a870eba37ba46c7a8e2868d9336cb0171c78d37c9eec3c3af21d"
 
       def install
         bin.install "awt"
@@ -19,7 +19,7 @@ class Awt < Formula
     end
     on_arm do
       url "https://github.com/kernel-labs-ai/awt/releases/download/v0.1.0/awt_0.1.0_Darwin_arm64.tar.gz"
-      sha256 "c3381d7592de49741d592b39e68e57cbfec6e794b278003105f980826dc5ecff"
+      sha256 "dfd08916043d38a97b5a5400b4d6f466abeef580b3b9aa49282166e4308eb6ea"
 
       def install
         bin.install "awt"
@@ -31,7 +31,7 @@ class Awt < Formula
     on_intel do
       if Hardware::CPU.is_64_bit?
         url "https://github.com/kernel-labs-ai/awt/releases/download/v0.1.0/awt_0.1.0_Linux_x86_64.tar.gz"
-        sha256 "b3fcc3d8eac8af34c8d9689917d501572b4b00b974fa7f8af41d956c8cfc4b26"
+        sha256 "e8416f7540474f5ba0ea294d49f88a45fdb9447abe08617a798e4cb74be9b52a"
 
         def install
           bin.install "awt"
@@ -41,7 +41,7 @@ class Awt < Formula
     on_arm do
       if Hardware::CPU.is_64_bit?
         url "https://github.com/kernel-labs-ai/awt/releases/download/v0.1.0/awt_0.1.0_Linux_arm64.tar.gz"
-        sha256 "8c4ca6b46b118d7466654f545e30f75e73b00dac4d32521f3053a0ebdbe1b07f"
+        sha256 "e18e8d5cbad0a54ac1db17fb70595575a7cfb05a0053d20deb9e2d3d4bb24750"
 
         def install
           bin.install "awt"
