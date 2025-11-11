@@ -5,21 +5,21 @@
 class Awt < Formula
   desc "Agent WorkTrees - Enable multiple AI agents to safely create, use, and hand off Git worktrees"
   homepage "https://github.com/kernel-labs-ai/awt"
-  version "0.1.0"
+  version "0.1.2"
   license "MIT"
 
   on_macos do
-    on_intel do
-      url "https://github.com/kernel-labs-ai/awt/releases/download/v0.1.0/awt_0.1.0_Darwin_x86_64.tar.gz"
-      sha256 "8f5f8dd83738a870eba37ba46c7a8e2868d9336cb0171c78d37c9eec3c3af21d"
+    if Hardware::CPU.intel?
+      url "https://github.com/kernel-labs-ai/awt/releases/download/v0.1.2/awt_0.1.2_Darwin_x86_64.tar.gz"
+      sha256 "39fbc0eb981f23fdc5b9911ed97b02ece189f2febee1c3b6486329d8f9551019"
 
       def install
         bin.install "awt"
       end
     end
-    on_arm do
-      url "https://github.com/kernel-labs-ai/awt/releases/download/v0.1.0/awt_0.1.0_Darwin_arm64.tar.gz"
-      sha256 "dfd08916043d38a97b5a5400b4d6f466abeef580b3b9aa49282166e4308eb6ea"
+    if Hardware::CPU.arm?
+      url "https://github.com/kernel-labs-ai/awt/releases/download/v0.1.2/awt_0.1.2_Darwin_arm64.tar.gz"
+      sha256 "ec5382a4e793f945690fdb4117a7def7dc43d28c0d350c574392c96d82bd42b3"
 
       def install
         bin.install "awt"
@@ -28,29 +28,19 @@ class Awt < Formula
   end
 
   on_linux do
-    on_intel do
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/kernel-labs-ai/awt/releases/download/v0.1.0/awt_0.1.0_Linux_x86_64.tar.gz"
-        sha256 "e8416f7540474f5ba0ea294d49f88a45fdb9447abe08617a798e4cb74be9b52a"
-
-        def install
-          bin.install "awt"
-        end
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/kernel-labs-ai/awt/releases/download/v0.1.2/awt_0.1.2_Linux_x86_64.tar.gz"
+      sha256 "0c21df2f6f7dc51d745dd8a32a8654b4111a934234fcb5053fcbb18fb932c2ed"
+      def install
+        bin.install "awt"
       end
     end
-    on_arm do
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/kernel-labs-ai/awt/releases/download/v0.1.0/awt_0.1.0_Linux_arm64.tar.gz"
-        sha256 "e18e8d5cbad0a54ac1db17fb70595575a7cfb05a0053d20deb9e2d3d4bb24750"
-
-        def install
-          bin.install "awt"
-        end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/kernel-labs-ai/awt/releases/download/v0.1.2/awt_0.1.2_Linux_arm64.tar.gz"
+      sha256 "3cc23f59cb8ed13e93bbfdaeb217ac1c2e65c1a6ddfbdae023c05cc9f534af3c"
+      def install
+        bin.install "awt"
       end
     end
-  end
-
-  test do
-    system "#{bin}/awt", "version"
   end
 end
