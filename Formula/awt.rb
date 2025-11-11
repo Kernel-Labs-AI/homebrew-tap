@@ -5,21 +5,21 @@
 class Awt < Formula
   desc "Agent WorkTrees - Enable multiple AI agents to safely create, use, and hand off Git worktrees"
   homepage "https://github.com/kernel-labs-ai/awt"
-  version "0.1.2"
+  version "0.1.3"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kernel-labs-ai/awt/releases/download/v0.1.2/awt_0.1.2_Darwin_x86_64.tar.gz"
-      sha256 "39fbc0eb981f23fdc5b9911ed97b02ece189f2febee1c3b6486329d8f9551019"
+      url "https://github.com/kernel-labs-ai/awt/releases/download/v0.1.3/awt_0.1.3_Darwin_x86_64.tar.gz"
+      sha256 "6deeed63823b28ca4e254efd9abb272480f254b1b3da1e3af453be0ffe7ba65a"
 
       def install
         bin.install "awt"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kernel-labs-ai/awt/releases/download/v0.1.2/awt_0.1.2_Darwin_arm64.tar.gz"
-      sha256 "ec5382a4e793f945690fdb4117a7def7dc43d28c0d350c574392c96d82bd42b3"
+      url "https://github.com/kernel-labs-ai/awt/releases/download/v0.1.3/awt_0.1.3_Darwin_arm64.tar.gz"
+      sha256 "039f727c84a9ae225b18f3fc47ad13245896861dc61be4f56af6425a9e0610ff"
 
       def install
         bin.install "awt"
@@ -29,15 +29,15 @@ class Awt < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kernel-labs-ai/awt/releases/download/v0.1.2/awt_0.1.2_Linux_x86_64.tar.gz"
-      sha256 "0c21df2f6f7dc51d745dd8a32a8654b4111a934234fcb5053fcbb18fb932c2ed"
+      url "https://github.com/kernel-labs-ai/awt/releases/download/v0.1.3/awt_0.1.3_Linux_x86_64.tar.gz"
+      sha256 "df76194ee6490025a210d16368af42781bdb71e783d471100a46519fb2a00649"
       def install
         bin.install "awt"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kernel-labs-ai/awt/releases/download/v0.1.2/awt_0.1.2_Linux_arm64.tar.gz"
-      sha256 "3cc23f59cb8ed13e93bbfdaeb217ac1c2e65c1a6ddfbdae023c05cc9f534af3c"
+      url "https://github.com/kernel-labs-ai/awt/releases/download/v0.1.3/awt_0.1.3_Linux_arm64.tar.gz"
+      sha256 "57bd50dd6001bc7b9023c564e726b8f10592a88fcfa1b6509de4ec748687c182"
       def install
         bin.install "awt"
       end
